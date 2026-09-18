@@ -20,7 +20,7 @@
             overflow-x: hidden;
         }
 
-        /* ===== 特斯拉式极简固定导航 ===== */
+        /* ===== 导航 ===== */
         .nav-fixed {
             position: fixed;
             top: 0;
@@ -34,7 +34,6 @@
             background: rgba(0, 0, 0, 0.65);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            transition: background 0.3s ease;
         }
 
         .nav-inner {
@@ -94,7 +93,7 @@
             background: rgba(255, 255, 255, 0.1);
         }
 
-        /* ===== 全屏Hero区域 ===== */
+        /* ===== Hero ===== */
         .hero-fullscreen {
             position: relative;
             height: 100vh;
@@ -186,7 +185,7 @@
 
         .hero-fullscreen .hero-desc {
             font-size: clamp(1rem, 1.5vw, 1.2rem);
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(255, 255, 255, 0.88);
             max-width: 720px;
             margin: 0 auto 40px;
             font-weight: 300;
@@ -245,7 +244,7 @@
             bottom: 32px;
             left: 50%;
             transform: translateX(-50%);
-            color: rgba(255, 255, 255, 0.4);
+            color: rgba(255, 255, 255, 0.6);
             font-size: 1.2rem;
             animation: bounce 2s infinite;
             z-index: 2;
@@ -256,7 +255,7 @@
             50% { transform: translateX(-50%) translateY(8px); }
         }
 
-        /* ===== 全屏产品卡片区域 ===== */
+        /* ===== 产品板块 ===== */
         .product-section {
             position: relative;
             min-height: 100vh;
@@ -286,10 +285,10 @@
             max-width: 800px;
             margin: 20px auto 0;
             padding: 24px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(90, 200, 250, 0.15);
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(90, 200, 250, 0.2);
             border-radius: 8px;
-            color: rgba(255, 255, 255, 0.75);
+            color: rgba(255, 255, 255, 0.92);
             line-height: 1.8;
             font-size: 0.95rem;
             text-align: left;
@@ -304,7 +303,7 @@
 
         .product-section .subtitle {
             font-size: 1rem;
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(255, 255, 255, 0.85);
             margin-bottom: 8px;
             font-weight: 400;
         }
@@ -314,7 +313,7 @@
             gap: 16px;
             justify-content: center;
             flex-wrap: wrap;
-            margin-top: 80px;   /* 已从 48px 改为 80px，按钮整体下移 */
+            margin-top: 80px;
         }
 
         .btn-product-primary {
@@ -338,7 +337,7 @@
 
         .btn-product-secondary {
             display: inline-block;
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.1);
             color: #fff;
             padding: 10px 40px;
             border-radius: 4px;
@@ -349,11 +348,11 @@
             transition: all 0.25s ease;
             min-width: 180px;
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .btn-product-secondary:hover {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.2);
         }
 
         .bg-pde {
@@ -407,8 +406,7 @@
                 radial-gradient(circle at 80% 20%, rgba(90, 200, 250, 0.05) 0%, transparent 40%);
         }
 
-        /* ===== 真·椭圆形词云 ===== */
-        /* 边缘词亮度保持不变：光晕置于词的下层（z-index: 0），无边缘遮罩 */
+        /* ===== 词云 ===== */
         .word-cloud {
             position: relative;
             width: 100%;
@@ -418,7 +416,6 @@
             display: block;
         }
 
-        /* 椭圆轨迹参考线 */
         .word-cloud::before {
             content: '';
             position: absolute;
@@ -428,12 +425,11 @@
             height: 48%;
             transform: translate(-50%, -50%);
             border-radius: 50%;
-            border: 1px dashed rgba(90, 200, 250, 0.08);
+            border: 1px dashed rgba(90, 200, 250, 0.1);
             pointer-events: none;
             z-index: 1;
         }
 
-        /* 内部光晕：放在词的下层，不压暗任何词 */
         .word-cloud::after {
             content: '';
             position: absolute;
@@ -444,7 +440,7 @@
             transform: translate(-50%, -50%);
             border-radius: 50%;
             background: radial-gradient(ellipse at center,
-                rgba(90, 200, 250, 0.06) 0%,
+                rgba(90, 200, 250, 0.08) 0%,
                 transparent 70%);
             pointer-events: none;
             filter: blur(30px);
@@ -481,36 +477,35 @@
                 scale(1.12);
         }
 
-        /* 词层级：所有字号增大2号（+0.2rem） */
         .word-cloud .kw-xl {
             font-size: 1.6rem;
             font-weight: 600;
-            color: rgba(90, 200, 250, 0.95);
+            color: rgba(90, 200, 250, 0.98);
             letter-spacing: -0.02em;
         }
 
         .word-cloud .kw-lg {
             font-size: 1.15rem;
             font-weight: 500;
-            color: rgba(255, 255, 255, 0.78);
+            color: rgba(255, 255, 255, 0.95);
         }
 
         .word-cloud .kw-md {
             font-size: 0.9rem;
             font-weight: 400;
-            color: rgba(255, 255, 255, 0.55);
+            color: rgba(255, 255, 255, 0.82);
         }
 
         .word-cloud .kw-sm {
             font-size: 0.78rem;
             font-weight: 300;
-            color: rgba(255, 255, 255, 0.38);
+            color: rgba(255, 255, 255, 0.72);
         }
 
         .word-cloud .kw-xs {
             font-size: 0.69rem;
             font-weight: 300;
-            color: rgba(255, 255, 255, 0.26);
+            color: rgba(255, 255, 255, 0.6);
         }
 
         .word-cloud .kw-accent {
@@ -518,7 +513,7 @@
             font-weight: 500;
         }
 
-        /* ===== 数据参数条 ===== */
+        /* ===== 数据参数 ===== */
         .specs-bar {
             background: #0a0a0a;
             padding: 80px 40px;
@@ -551,13 +546,13 @@
 
         .spec-item .spec-label {
             font-size: 0.8rem;
-            color: #666;
+            color: #b0b0b0;
             margin-top: 10px;
             letter-spacing: 1px;
             text-transform: uppercase;
         }
 
-        /* ===== 核心特色板块 ===== */
+        /* ===== 核心特色 ===== */
         .features-section {
             background: #000;
             padding: 100px 40px;
@@ -583,7 +578,7 @@
 
         .features-subtitle {
             text-align: center;
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.8);
             font-size: 1rem;
             font-weight: 300;
             margin-bottom: 60px;
@@ -611,7 +606,7 @@
         }
 
         .feature-row:hover {
-            background: rgba(90, 200, 250, 0.03);
+            background: rgba(90, 200, 250, 0.04);
         }
 
         .feature-text-top {
@@ -638,12 +633,242 @@
 
         .feature-row p {
             font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.78);
             line-height: 1.6;
             font-weight: 300;
         }
 
-        /* ===== 宣言板块 ===== */
+        /* ===== 产品矩阵 ===== */
+        .products-section {
+            background: #000;
+            padding: 100px 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .products-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .products-title {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .products-title .accent {
+            color: #5ac8fa;
+        }
+
+        .products-subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+            font-weight: 300;
+            margin-bottom: 60px;
+            max-width: 760px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .product-card {
+            position: relative;
+            padding: 36px 28px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #5ac8fa, #a0f0ff, #5ac8fa);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .product-card:hover {
+            border-color: rgba(90, 200, 250, 0.4);
+            background: rgba(90, 200, 250, 0.06);
+            transform: translateY(-4px);
+        }
+
+        .product-card:hover::before {
+            opacity: 1;
+        }
+
+        .product-card.featured {
+            border-color: rgba(90, 200, 250, 0.45);
+            background: rgba(90, 200, 250, 0.07);
+            box-shadow: 0 0 40px rgba(90, 200, 250, 0.12);
+        }
+
+        .product-card.featured::before {
+            opacity: 1;
+        }
+
+        .product-card .p-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #7ad4ff;
+            border: 1px solid rgba(90, 200, 250, 0.5);
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .product-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: -0.01em;
+            color: #fff;
+        }
+
+        .product-card .p-sub {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.82);
+            margin-bottom: 20px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        .product-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .product-card ul li {
+            position: relative;
+            padding: 8px 0 8px 20px;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.5;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            font-weight: 300;
+        }
+
+        .product-card ul li:last-child {
+            border-bottom: none;
+        }
+
+        .product-card ul li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #5ac8fa;
+            font-size: 0.9rem;
+        }
+
+        .product-card .p-footer {
+            margin-top: 24px;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.72);
+            letter-spacing: 0.5px;
+        }
+
+        .kits-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .kit-card {
+            padding: 28px 22px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .kit-card:hover {
+            border-color: rgba(90, 200, 250, 0.4);
+            background: rgba(90, 200, 250, 0.06);
+            transform: translateY(-4px);
+        }
+
+        .kit-card .k-icon {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+        }
+
+        .kit-card h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #fff;
+            letter-spacing: -0.01em;
+        }
+
+        .kit-card .k-sub {
+            font-size: 0.75rem;
+            color: #7ad4ff;
+            margin-bottom: 14px;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+
+        .kit-card p {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.82);
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .extras-bar {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 32px;
+            background: rgba(90, 200, 250, 0.05);
+            border: 1px solid rgba(90, 200, 250, 0.25);
+            border-radius: 16px;
+        }
+
+        .extra-item {
+            text-align: center;
+        }
+
+        .extra-item .e-icon {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        .extra-item h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .extra-item p {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.82);
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* ===== 宣言 ===== */
         .manifesto-section {
             background: #000;
             padding: 120px 40px;
@@ -671,7 +896,7 @@
 
         .manifesto-section .author {
             font-size: 0.8rem;
-            color: #555;
+            color: #b0b0b0;
             letter-spacing: 3px;
             text-transform: uppercase;
         }
@@ -700,7 +925,7 @@
         }
 
         .footer-links a {
-            color: #666;
+            color: #b0b0b0;
             text-decoration: none;
             font-size: 0.8rem;
             font-weight: 500;
@@ -713,16 +938,26 @@
         }
 
         .footer-copy {
-            color: #444;
+            color: #a0a0a0;
             font-size: 0.75rem;
             letter-spacing: 0.3px;
         }
 
-        /* ===== 响应式适配 ===== */
+        /* ===== 响应式 ===== */
         @media (max-width: 1024px) {
             .specs-inner {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 50px;
+            }
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            .kits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .extras-bar {
+                grid-template-columns: 1fr;
+                gap: 32px;
             }
         }
 
@@ -757,7 +992,7 @@
             .product-buttons {
                 flex-direction: column;
                 align-items: center;
-                margin-top: 60px;   /* 移动端略收，避免按钮过于靠底 */
+                margin-top: 60px;
             }
 
             .btn-product-primary,
@@ -795,7 +1030,6 @@
                 gap: 20px;
             }
 
-            /* 词云移动端缩放：字号同步增大2号 */
             .word-cloud {
                 height: 140px;
                 transform: scale(0.85);
@@ -807,6 +1041,13 @@
             .word-cloud .kw-md { font-size: 0.78rem; }
             .word-cloud .kw-sm { font-size: 0.7rem; }
             .word-cloud .kw-xs { font-size: 0.62rem; }
+
+            .products-section {
+                padding: 80px 20px;
+            }
+            .kits-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 480px) {
@@ -845,15 +1086,15 @@
 </head>
 <body>
 
-    <!-- ===== 导航栏 ===== -->
     <nav class="nav-fixed">
         <div class="nav-inner">
             <div class="nav-logo">REXYN</div>
             <div class="nav-center">
                 <a href="#pde">元模型PDE</a>
                 <a href="#ai">跨层共优化</a>
-                <a href="#features">核心特色</a>
                 <a href="#manufacturing">3D折叠</a>
+                <a href="#products">产品矩阵</a>
+                <a href="#features">核心特色</a>
             </div>
             <div class="nav-right">
                 <a href="#">技术白皮书</a>
@@ -862,7 +1103,6 @@
         </div>
     </nav>
 
-    <!-- ===== 首页Hero区域 ===== -->
     <section class="hero-fullscreen">
         <div class="hero-bg"></div>
         <div class="hero-grid"></div>
@@ -884,7 +1124,6 @@
         <div class="scroll-hint">↓</div>
     </section>
 
-    <!-- ===== 产品板块1：元模型PDE内核 ===== -->
     <section class="product-section" id="pde">
         <div class="bg-layer bg-pde"></div>
         <div class="content-layer">
@@ -894,16 +1133,12 @@
                 本平台创新性构建一体化EDA元模型体系，打破传统EDA工具数据、物理、层级相互割裂的痛点。平台将EDA设计数据、物理约束方程、多层设计层级、工艺随机变异完成统一抽象建模，原生搭载金字塔多分辨率架构，实现架构层、模块层、器件版图层的双向参数映射与插值迭代。同时内置电流连续性、热流守恒、能量守恒三大物理硬约束，杜绝物理不可实现的优化结果。针对3D混合键合工艺，将垂直互连的接触电阻、界面热阻、寄生电容作为核心一阶变量建模，而非传统工具的后置附属参数，精准适配韬定律RC时间缩放的核心设计需求。
             </div>
 
-            <!-- 椭圆词云1：元模型PDE内核 -->
             <div class="word-cloud">
-                <!-- 中心核心词 -->
                 <span class="kw kw-xl" style="--angle: 0deg; --rx: 0px; --ry: 0px;">元模型</span>
-                <!-- 内圈 -->
                 <span class="kw kw-lg" style="--angle: 30deg; --rx: 64px; --ry: 17px;">统一抽象</span>
                 <span class="kw kw-lg" style="--angle: 120deg; --rx: 69px; --ry: 18px;">跨层双向映射</span>
                 <span class="kw kw-md" style="--angle: 210deg; --rx: 66px; --ry: 17px;">金字塔多分辨率</span>
                 <span class="kw kw-md" style="--angle: 300deg; --rx: 63px; --ry: 17px;">参数插值</span>
-                <!-- 外圈 -->
                 <span class="kw kw-lg kw-accent" style="--angle: 0deg; --rx: 120px; --ry: 31px;">物理守恒</span>
                 <span class="kw kw-md" style="--angle: 45deg; --rx: 132px; --ry: 34px;">电流连续性</span>
                 <span class="kw kw-sm" style="--angle: 80deg; --rx: 137px; --ry: 35px;">热流守恒</span>
@@ -914,7 +1149,6 @@
                 <span class="kw kw-xs" style="--angle: 255deg; --rx: 137px; --ry: 35px;">寄生电容</span>
                 <span class="kw kw-md" style="--angle: 290deg; --rx: 129px; --ry: 33px;">一阶变量</span>
                 <span class="kw kw-lg" style="--angle: 325deg; --rx: 123px; --ry: 32px;">RC时间缩放</span>
-                <!-- 最外圈 -->
                 <span class="kw kw-xs" style="--angle: 20deg; --rx: 132px; --ry: 34px;">架构级</span>
                 <span class="kw kw-xs" style="--angle: 100deg; --rx: 137px; --ry: 36px;">模块级</span>
                 <span class="kw kw-xs" style="--angle: 180deg; --rx: 134px; --ry: 35px;">器件版图级</span>
@@ -929,7 +1163,6 @@
         </div>
     </section>
 
-    <!-- ===== 产品板块2：跨层共优化 ===== -->
     <section class="product-section" id="ai">
         <div class="bg-layer bg-ai"></div>
         <div class="content-layer">
@@ -939,16 +1172,12 @@
                 依托金字塔多分辨率元模型底座，搭建全新跨层梯度传递共优化引擎，彻底革新传统EDA“先逻辑设计、后物理迭代”的低效流程。平台在粗粒度架构层完成全局设计空间搜索，在中细粒度模块与版图层完成精细化参数调优，支持层级间梯度信息双向回传与联动优化。全程搭载PDE物理约束投影算法，所有优化迭代结果均满足电热耦合物理规则，可同步完成功耗、时序、温度、良率多目标协同优化，大幅削减3D折叠芯片设计的迭代次数，解决传统3DIC仿真维度爆炸、收敛困难的核心痛点。
             </div>
 
-            <!-- 椭圆词云2：跨层共优化 -->
             <div class="word-cloud">
-                <!-- 中心核心词 -->
                 <span class="kw kw-xl" style="--angle: 0deg; --rx: 0px; --ry: 0px;">跨层共优化</span>
-                <!-- 内圈 -->
                 <span class="kw kw-lg" style="--angle: 40deg; --rx: 52px; --ry: 14px;">逻辑-物理协同</span>
                 <span class="kw kw-md" style="--angle: 130deg; --rx: 55px; --ry: 15px;">梯度传递</span>
                 <span class="kw kw-lg kw-accent" style="--angle: 220deg; --rx: 52px; --ry: 14px;">分层多目标</span>
                 <span class="kw kw-md" style="--angle: 310deg; --rx: 50px; --ry: 14px;">双向回传</span>
-                <!-- 外圈 -->
                 <span class="kw kw-sm" style="--angle: 0deg; --rx: 104px; --ry: 27px;">全局设计空间搜索</span>
                 <span class="kw kw-md" style="--angle: 45deg; --rx: 106px; --ry: 27px;">精细化参数调优</span>
                 <span class="kw kw-sm" style="--angle: 90deg; --rx: 109px; --ry: 28px;">联动优化</span>
@@ -959,7 +1188,6 @@
                 <span class="kw kw-md" style="--angle: 265deg; --rx: 105px; --ry: 27px;">温度</span>
                 <span class="kw kw-md" style="--angle: 290deg; --rx: 104px; --ry: 27px;">良率</span>
                 <span class="kw kw-lg" style="--angle: 325deg; --rx: 102px; --ry: 26px;">多目标协同</span>
-                <!-- 最外圈 -->
                 <span class="kw kw-xs" style="--angle: 20deg; --rx: 137px; --ry: 36px;">迭代次数削减</span>
                 <span class="kw kw-xs" style="--angle: 75deg; --rx: 141px; --ry: 37px;">维度爆炸</span>
                 <span class="kw kw-xs" style="--angle: 160deg; --rx: 140px; --ry: 37px;">收敛困难</span>
@@ -973,7 +1201,6 @@
         </div>
     </section>
 
-    <!-- ===== 产品板块3：韬定律3D折叠芯片设计 ===== -->
     <section class="product-section" id="manufacturing">
         <div class="bg-layer bg-manufacturing"></div>
         <div class="content-layer">
@@ -983,16 +1210,12 @@
                 区别于传统3D芯片简单堆叠范式，本平台原生适配华为韬定律核心理论，独创逻辑折叠互连抽象原语，精准建模跨层逻辑分区折叠带来的全局互连线长压缩效应。通过内置RC时间缩放代价函数，可快速评估不同折叠划分方案的功耗、时序收益，无需反复开展完整版图仿真提取。同时结合混合键合阵列特性，实现电路耦合、热场扩散分层统一建模，搭配热错位排布策略，规避层间热点叠加风险，有效提升3D折叠芯片的制造良率与运行稳定性，全面适配先进2.5D/3D堆叠芯片的设计与量产需求。
             </div>
 
-            <!-- 椭圆词云3：韬定律3D折叠芯片设计 -->
             <div class="word-cloud">
-                <!-- 中心核心词 -->
                 <span class="kw kw-xl" style="--angle: 0deg; --rx: 0px; --ry: 0px;">韬定律</span>
-                <!-- 内圈 -->
                 <span class="kw kw-lg" style="--angle: 50deg; --rx: 55px; --ry: 15px;">3D折叠芯片</span>
                 <span class="kw kw-lg kw-accent" style="--angle: 140deg; --rx: 55px; --ry: 15px;">折叠互连原语</span>
                 <span class="kw kw-md" style="--angle: 230deg; --rx: 52px; --ry: 14px;">全局线长压缩</span>
                 <span class="kw kw-md" style="--angle: 320deg; --rx: 50px; --ry: 13px;">RC功耗优化</span>
-                <!-- 外圈 -->
                 <span class="kw kw-sm" style="--angle: 0deg; --rx: 106px; --ry: 27px;">逻辑分区跨层折叠</span>
                 <span class="kw kw-sm" style="--angle: 40deg; --rx: 111px; --ry: 29px;">RC时间缩放代价函数</span>
                 <span class="kw kw-md" style="--angle: 80deg; --rx: 113px; --ry: 29px;">折叠划分方案</span>
@@ -1002,7 +1225,6 @@
                 <span class="kw kw-sm" style="--angle: 240deg; --rx: 111px; --ry: 29px;">分层统一建模</span>
                 <span class="kw kw-sm" style="--angle: 275deg; --rx: 109px; --ry: 28px;">热错位排布</span>
                 <span class="kw kw-lg" style="--angle: 315deg; --rx: 105px; --ry: 27px;">制造良率</span>
-                <!-- 最外圈 -->
                 <span class="kw kw-xs" style="--angle: 30deg; --rx: 141px; --ry: 37px;">层间热点叠加</span>
                 <span class="kw kw-xs" style="--angle: 110deg; --rx: 146px; --ry: 39px;">运行稳定性</span>
                 <span class="kw kw-xs" style="--angle: 190deg; --rx: 144px; --ry: 38px;">2.5D/3D堆叠</span>
@@ -1016,7 +1238,6 @@
         </div>
     </section>
 
-    <!-- ===== 数据参数板块 ===== -->
     <section class="specs-bar">
         <div class="specs-inner">
             <div class="spec-item">
@@ -1038,7 +1259,6 @@
         </div>
     </section>
 
-    <!-- ===== 核心特色板块 ===== -->
     <section class="features-section" id="features">
         <div class="features-inner">
             <h2 class="features-title">
@@ -1100,17 +1320,117 @@
         </div>
     </section>
 
-    <!-- ===== 品牌宣言板块 ===== -->
+    <section class="products-section" id="products">
+        <div class="products-inner">
+            <h2 class="products-title">
+                Agentic-EDA <span class="accent">产品矩阵</span>
+            </h2>
+            <p class="products-subtitle">
+                面向韬定律3D折叠芯片与混合键合3D-IC的完整产品线。从学术原型到企业流片，分层授权，平滑升级。
+            </p>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <span class="p-badge">学术研究版</span>
+                    <h3>REXYN Academic</h3>
+                    <p class="p-sub">面向高校实验室、课题研究、DAC学术实验</p>
+                    <ul>
+                        <li>Metamodel-Core 元模型内核</li>
+                        <li>TauFold-Explorer 架构探索（基础模式）</li>
+                        <li>MultiPhys-CoOpt 基础稳态电热求解</li>
+                        <li>蒙特卡洛基础良率评估</li>
+                        <li>Experiment-Agent 实验评估Agent</li>
+                    </ul>
+                    <div class="p-footer">交付：Python SDK + 极简Web界面 · 禁止商用流片</div>
+                </div>
+
+                <div class="product-card featured">
+                    <span class="p-badge">企业标准版</span>
+                    <h3>REXYN Standard</h3>
+                    <p class="p-sub">面向企业预研、3D折叠架构方案验证、混合键合评估</p>
+                    <ul>
+                        <li>学术版全部能力</li>
+                        <li>TauFold-Explorer 完整自动折叠划分搜索</li>
+                        <li>MultiPhys-CoOpt 完整跨层共优化</li>
+                        <li>全套3D隐性失效判据库</li>
+                        <li>Agent集群：架构探索 / 诊断 / 帕累托</li>
+                        <li>基础网表导入导出</li>
+                    </ul>
+                    <div class="p-footer">交付：企业级SDK + 完整Web可视化 · 基础技术支持</div>
+                </div>
+
+                <div class="product-card">
+                    <span class="p-badge">企业高级版</span>
+                    <h3>REXYN Enterprise</h3>
+                    <p class="p-sub">面向流片导向完整项目，Agentic-EDA全链路</p>
+                    <ul>
+                        <li>企业标准版全部能力</li>
+                        <li>AI-ROM-Accelerate 仿真加速套件</li>
+                        <li>DTCO-Bridge 工艺-设计闭环套件</li>
+                        <li>全部Agent引擎解锁</li>
+                        <li>分布式批量仿真调度</li>
+                        <li>GDS完整签核导出 · 对接商用EDA</li>
+                    </ul>
+                    <div class="p-footer">交付：完整平台 + 工程交付报告 · 可选购增值服务</div>
+                </div>
+            </div>
+
+            <div class="kits-grid">
+                <div class="kit-card">
+                    <div class="k-icon">📦</div>
+                    <h4>TauFold-Explorer</h4>
+                    <div class="k-sub">韬定律3D折叠架构探索</div>
+                    <p>L1金字塔架构建模、折叠互连原语、自动折叠划分搜索、RC-τ/功耗/热场预估、多目标帕累托筛选、自动实验报告。</p>
+                </div>
+                <div class="kit-card">
+                    <div class="k-icon">⚙️</div>
+                    <h4>MultiPhys-CoOpt</h4>
+                    <div class="k-sub">多物理场跨层协同优化</div>
+                    <p>L1-L2-L3跨层梯度传递、电-热稳态耦合求解、μ+kσ统计约束松弛、3D隐性失效判据库、蒙特卡洛良率评估。</p>
+                </div>
+                <div class="kit-card">
+                    <div class="k-icon">⚡</div>
+                    <h4>AI-ROM-Accelerate</h4>
+                    <div class="k-sub">AI降阶仿真加速</div>
+                    <p>FNO/PINN降阶模型插件、粗粒度AI快速物理场预测、粗细层级精度自适应切换、空间相关工艺变异、批量任务调度。</p>
+                </div>
+                <div class="kit-card">
+                    <div class="k-icon">🔗</div>
+                    <h4>DTCO-Bridge</h4>
+                    <div class="k-sub">设计-工艺闭环与EDA互操作</div>
+                    <p>TCAD/WAT数据校准、网表/DEF/GDS双向导入导出、对接Synopsys/Cadence签核流程、混合键合工艺参数库。</p>
+                </div>
+            </div>
+
+            <div class="extras-bar">
+                <div class="extra-item">
+                    <div class="e-icon">🤖</div>
+                    <h4>Agent-Orchestrator</h4>
+                    <p>架构探索Agent / 跨层共优化Agent / 仿真诊断Agent / 帕累托权衡Agent / 实验评估Agent / 交付输出Agent</p>
+                </div>
+                <div class="extra-item">
+                    <div class="e-icon">📑</div>
+                    <h4>增值服务包</h4>
+                    <p>技术白皮书 · PDK适配服务 · 模型校准定制 · 现场培训 · 课题咨询 · 定制消融实验与对标报告</p>
+                </div>
+                <div class="extra-item">
+                    <div class="e-icon">🏁</div>
+                    <h4>行业固化版本</h4>
+                    <p>REXYN VPU-ISP 3D折叠视频芯片专用版：预加载基准用例、韬定律折叠模板、调优失效判据与仿真参数</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="manifesto-section">
         <blockquote>
             为设计，为制造<br>
             <strong>重构EDA</strong><br>
-            <span class="blue">更精确、更智能</span>的芯片设计平台
+            <span class="blue">更精确、更智能</span>的芯片设计工具
         </blockquote>
         <div class="author">— Rexyn 创始团队</div>
     </section>
 
-    <!-- ===== 页脚 ===== -->
     <footer class="footer-tesla">
         <div class="footer-inner">
             <div class="footer-links">
