@@ -106,23 +106,22 @@
             text-align: center;
             overflow: hidden;
             background: #000;
+            padding: 0 24px;
         }
 
-        /* 背景视觉 - 抽象芯片/电路氛围 */
         .hero-bg {
             position: absolute;
             inset: 0;
-            background: 
+            background:
                 radial-gradient(ellipse 80% 60% at 50% 40%, rgba(90, 200, 250, 0.12) 0%, transparent 70%),
                 radial-gradient(ellipse 50% 50% at 80% 70%, rgba(90, 200, 250, 0.06) 0%, transparent 60%),
                 #000;
         }
 
-        /* 精密网格 */
         .hero-grid {
             position: absolute;
             inset: 0;
-            background-image: 
+            background-image:
                 linear-gradient(rgba(90, 200, 250, 0.04) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(90, 200, 250, 0.04) 1px, transparent 1px);
             background-size: 60px 60px;
@@ -130,7 +129,6 @@
             -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 20%, transparent 75%);
         }
 
-        /* 动态光晕 */
         .hero-glow {
             position: absolute;
             width: 600px;
@@ -152,7 +150,6 @@
         .hero-content {
             position: relative;
             z-index: 2;
-            padding: 0 24px;
             max-width: 900px;
         }
 
@@ -190,7 +187,7 @@
         .hero-fullscreen .hero-desc {
             font-size: clamp(1rem, 1.5vw, 1.2rem);
             color: rgba(255, 255, 255, 0.7);
-            max-width: 680px;
+            max-width: 720px;
             margin: 0 auto 40px;
             font-weight: 300;
             line-height: 1.6;
@@ -243,7 +240,6 @@
             background: rgba(255, 255, 255, 0.2);
         }
 
-        /* 向下滚动指示 */
         .scroll-hint {
             position: absolute;
             bottom: 32px;
@@ -260,17 +256,17 @@
             50% { transform: translateX(-50%) translateY(8px); }
         }
 
-        /* ===== 全屏产品卡片区域（特斯拉式） ===== */
+        /* ===== 全屏产品卡片区域 ===== */
         .product-section {
             position: relative;
-            height: 100vh;
-            min-height: 650px;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             overflow: hidden;
+            padding: 100px 24px 60px;
         }
 
         .product-section .bg-layer {
@@ -282,7 +278,21 @@
         .product-section .content-layer {
             position: relative;
             z-index: 2;
-            padding: 0 24px;
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        .product-text-desc {
+            max-width: 800px;
+            margin: 20px auto 0;
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(90, 200, 250, 0.15);
+            border-radius: 8px;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.8;
+            font-size: 0.95rem;
+            text-align: left;
         }
 
         .product-section h2 {
@@ -299,20 +309,12 @@
             font-weight: 400;
         }
 
-        .product-section .detail-text {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.45);
-            max-width: 580px;
-            margin: 0 auto 32px;
-            line-height: 1.6;
-            font-weight: 300;
-        }
-
         .product-buttons {
             display: flex;
             gap: 16px;
             justify-content: center;
             flex-wrap: wrap;
+            margin-top: 80px;   /* 已从 48px 改为 80px，按钮整体下移 */
         }
 
         .btn-product-primary {
@@ -354,9 +356,8 @@
             background: rgba(255, 255, 255, 0.15);
         }
 
-        /* 产品区域背景 —— 每个不同氛围 */
         .bg-pde {
-            background: 
+            background:
                 radial-gradient(ellipse 70% 50% at 50% 30%, rgba(90, 200, 250, 0.1) 0%, transparent 70%),
                 linear-gradient(180deg, #0a0a0a 0%, #000 100%);
         }
@@ -365,7 +366,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background-image: 
+            background-image:
                 linear-gradient(rgba(90, 200, 250, 0.03) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(90, 200, 250, 0.03) 1px, transparent 1px);
             background-size: 50px 50px;
@@ -374,7 +375,7 @@
         }
 
         .bg-ai {
-            background: 
+            background:
                 radial-gradient(ellipse 80% 60% at 30% 60%, rgba(90, 200, 250, 0.08) 0%, transparent 60%),
                 radial-gradient(ellipse 60% 50% at 80% 30%, rgba(160, 240, 255, 0.05) 0%, transparent 60%),
                 #000;
@@ -384,7 +385,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: 
+            background:
                 repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(90, 200, 250, 0.02) 40px, rgba(90, 200, 250, 0.02) 41px),
                 repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(90, 200, 250, 0.02) 40px, rgba(90, 200, 250, 0.02) 41px);
             mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, black 10%, transparent 70%);
@@ -392,7 +393,7 @@
         }
 
         .bg-manufacturing {
-            background: 
+            background:
                 radial-gradient(ellipse 90% 60% at 50% 70%, rgba(90, 200, 250, 0.06) 0%, transparent 65%),
                 #000;
         }
@@ -401,12 +402,123 @@
             content: '';
             position: absolute;
             inset: 0;
-            background-image: 
+            background-image:
                 radial-gradient(circle at 20% 80%, rgba(90, 200, 250, 0.05) 0%, transparent 40%),
                 radial-gradient(circle at 80% 20%, rgba(90, 200, 250, 0.05) 0%, transparent 40%);
         }
 
-        /* ===== 特斯拉式数据/参数条 ===== */
+        /* ===== 真·椭圆形词云 ===== */
+        /* 边缘词亮度保持不变：光晕置于词的下层（z-index: 0），无边缘遮罩 */
+        .word-cloud {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            height: 170px;
+            margin: 24px auto 16px;
+            display: block;
+        }
+
+        /* 椭圆轨迹参考线 */
+        .word-cloud::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 53%;
+            height: 48%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            border: 1px dashed rgba(90, 200, 250, 0.08);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* 内部光晕：放在词的下层，不压暗任何词 */
+        .word-cloud::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 42%;
+            height: 36%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background: radial-gradient(ellipse at center,
+                rgba(90, 200, 250, 0.06) 0%,
+                transparent 70%);
+            pointer-events: none;
+            filter: blur(30px);
+            z-index: 0;
+        }
+
+        .word-cloud .kw {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: inline-block;
+            white-space: nowrap;
+            line-height: 1;
+            letter-spacing: -0.02em;
+            cursor: default;
+            transition: color 0.3s ease, transform 0.3s ease;
+            transform:
+                translate(-50%, -50%)
+                rotate(var(--angle))
+                translateX(var(--rx))
+                translateY(var(--ry))
+                rotate(calc(-1 * var(--angle)));
+            z-index: 2;
+        }
+
+        .word-cloud .kw:hover {
+            color: #5ac8fa !important;
+            transform:
+                translate(-50%, -50%)
+                rotate(var(--angle))
+                translateX(var(--rx))
+                translateY(var(--ry))
+                rotate(calc(-1 * var(--angle)))
+                scale(1.12);
+        }
+
+        /* 词层级：所有字号增大2号（+0.2rem） */
+        .word-cloud .kw-xl {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: rgba(90, 200, 250, 0.95);
+            letter-spacing: -0.02em;
+        }
+
+        .word-cloud .kw-lg {
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.78);
+        }
+
+        .word-cloud .kw-md {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+        .word-cloud .kw-sm {
+            font-size: 0.78rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.38);
+        }
+
+        .word-cloud .kw-xs {
+            font-size: 0.69rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.26);
+        }
+
+        .word-cloud .kw-accent {
+            color: #5ac8fa;
+            font-weight: 500;
+        }
+
+        /* ===== 数据参数条 ===== */
         .specs-bar {
             background: #0a0a0a;
             padding: 80px 40px;
@@ -445,7 +557,7 @@
             text-transform: uppercase;
         }
 
-        /* ===== 七大特色 —— 特斯拉式简洁列表 ===== */
+        /* ===== 核心特色板块 ===== */
         .features-section {
             background: #000;
             padding: 100px 40px;
@@ -461,12 +573,23 @@
             font-size: 2.2rem;
             font-weight: 600;
             letter-spacing: -0.02em;
-            margin-bottom: 60px;
+            margin-bottom: 20px;
             text-align: center;
         }
 
         .features-title .accent {
             color: #5ac8fa;
+        }
+
+        .features-subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 1rem;
+            font-weight: 300;
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .features-grid {
@@ -491,6 +614,13 @@
             background: rgba(90, 200, 250, 0.03);
         }
 
+        .feature-text-top {
+            color: #5ac8fa;
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
         .feature-row .f-num {
             font-size: 0.75rem;
             color: #5ac8fa;
@@ -513,7 +643,7 @@
             font-weight: 300;
         }
 
-        /* ===== 宣言区域 ===== */
+        /* ===== 宣言板块 ===== */
         .manifesto-section {
             background: #000;
             padding: 120px 40px;
@@ -546,7 +676,7 @@
             text-transform: uppercase;
         }
 
-        /* ===== 特斯拉式页脚 ===== */
+        /* ===== 页脚 ===== */
         .footer-tesla {
             background: #0a0a0a;
             padding: 40px;
@@ -588,7 +718,7 @@
             letter-spacing: 0.3px;
         }
 
-        /* ===== 响应式 ===== */
+        /* ===== 响应式适配 ===== */
         @media (max-width: 1024px) {
             .specs-inner {
                 grid-template-columns: repeat(2, 1fr);
@@ -621,12 +751,13 @@
             }
 
             .product-section {
-                min-height: 550px;
+                padding: 80px 20px 40px;
             }
 
             .product-buttons {
                 flex-direction: column;
                 align-items: center;
+                margin-top: 60px;   /* 移动端略收，避免按钮过于靠底 */
             }
 
             .btn-product-primary,
@@ -663,6 +794,19 @@
                 justify-content: center;
                 gap: 20px;
             }
+
+            /* 词云移动端缩放：字号同步增大2号 */
+            .word-cloud {
+                height: 140px;
+                transform: scale(0.85);
+                transform-origin: center center;
+                margin: 0 auto;
+            }
+            .word-cloud .kw-xl { font-size: 1.2rem; }
+            .word-cloud .kw-lg { font-size: 0.92rem; }
+            .word-cloud .kw-md { font-size: 0.78rem; }
+            .word-cloud .kw-sm { font-size: 0.7rem; }
+            .word-cloud .kw-xs { font-size: 0.62rem; }
         }
 
         @media (max-width: 480px) {
@@ -673,9 +817,13 @@
             .hero-fullscreen h1 {
                 font-size: 2rem;
             }
+
+            .word-cloud {
+                height: 120px;
+                transform: scale(0.7);
+            }
         }
 
-        /* 平滑滚动 */
         html {
             scroll-behavior: smooth;
         }
@@ -684,10 +832,12 @@
             width: 6px;
             background: #000;
         }
+
         ::-webkit-scrollbar-thumb {
             background: #222;
             border-radius: 3px;
         }
+
         ::-webkit-scrollbar-thumb:hover {
             background: #5ac8fa;
         }
@@ -695,96 +845,178 @@
 </head>
 <body>
 
-    <!-- ===== 特斯拉式固定导航 ===== -->
+    <!-- ===== 导航栏 ===== -->
     <nav class="nav-fixed">
         <div class="nav-inner">
             <div class="nav-logo">REXYN</div>
             <div class="nav-center">
                 <a href="#pde">元模型PDE</a>
-                <a href="#ai">AI引擎</a>
+                <a href="#ai">跨层共优化</a>
                 <a href="#features">核心特色</a>
-                <a href="#manufacturing">先进封装</a>
+                <a href="#manufacturing">3D折叠</a>
             </div>
             <div class="nav-right">
-                <a href="/trg-tcad/">技术白皮书</a>
-                <a href="/trg-tcad/">联系顾问</a>
+                <a href="#">技术白皮书</a>
+                <a href="#">联系顾问</a>
             </div>
         </div>
     </nav>
 
-    <!-- ===== Hero 全屏区域 ===== -->
+    <!-- ===== 首页Hero区域 ===== -->
     <section class="hero-fullscreen">
         <div class="hero-bg"></div>
         <div class="hero-grid"></div>
         <div class="hero-glow"></div>
-
         <div class="hero-content">
-            <div class="hero-label">原创元模型PDE · 重新发明轮子</div>
+            <div class="hero-label">元模型PDE · 韬定律3D折叠 · 重构EDA</div>
             <h1>
-                为芯片设计注入<br>
-                <span class="accent">元模型物理智能</span>
+                为3D折叠芯片<br>
+                注入<span class="accent">元模型物理智能</span>
             </h1>
             <p class="hero-desc">
-                行业首款扩散/耦合元模型PDE自适应仿真平台。物理机理+工程数据双驱动，打破传统EDA层级割裂、模型盲配、精度效率失衡的行业困局，让仿真结果可量产、高可靠。
+                行业首款面向韬定律3D折叠芯片的EDA元模型平台。统一抽象几何-电路-物理场-工艺变异，内置守恒恒等式硬约束，支持金字塔多分辨率双向映射与跨层共优化，实现逻辑与物理场同步协同设计。
             </p>
             <div class="hero-buttons">
-                <a href="/trg-tcad/" class="btn-tesla-primary">探索 Rexyn 平台</a>
-                <a href="/trg-tcad/" class="btn-tesla-secondary">观看技术演示</a>
+                <a href="#" class="btn-tesla-primary">探索 Rexyn 平台</a>
+                <a href="#" class="btn-tesla-secondary">观看技术演示</a>
             </div>
         </div>
-
         <div class="scroll-hint">↓</div>
     </section>
 
-    <!-- ===== 产品区域 1：双元PDE ===== -->
+    <!-- ===== 产品板块1：元模型PDE内核 ===== -->
     <section class="product-section" id="pde">
         <div class="bg-layer bg-pde"></div>
         <div class="content-layer">
-            <h2>元模型PDE</h2>
-            <p class="subtitle">扩散 / 耦合自适应切换 · 全场景智能适配</p>
-            <p class="detail-text">
-                自动识别2D平面、2.5D Chiplet、3D堆叠芯片的物理场景差异，自适应切换单向外源扩散仿真与双向内生耦合仿真范式。从晶体管器件到整芯封装，全层级统一建模。
-            </p>
+            <h2>元模型PDE内核</h2>
+            <p class="subtitle">统一抽象 · 物理守恒 · 跨层双向映射</p>
+            <div class="product-text-desc">
+                本平台创新性构建一体化EDA元模型体系，打破传统EDA工具数据、物理、层级相互割裂的痛点。平台将EDA设计数据、物理约束方程、多层设计层级、工艺随机变异完成统一抽象建模，原生搭载金字塔多分辨率架构，实现架构层、模块层、器件版图层的双向参数映射与插值迭代。同时内置电流连续性、热流守恒、能量守恒三大物理硬约束，杜绝物理不可实现的优化结果。针对3D混合键合工艺，将垂直互连的接触电阻、界面热阻、寄生电容作为核心一阶变量建模，而非传统工具的后置附属参数，精准适配韬定律RC时间缩放的核心设计需求。
+            </div>
+
+            <!-- 椭圆词云1：元模型PDE内核 -->
+            <div class="word-cloud">
+                <!-- 中心核心词 -->
+                <span class="kw kw-xl" style="--angle: 0deg; --rx: 0px; --ry: 0px;">元模型</span>
+                <!-- 内圈 -->
+                <span class="kw kw-lg" style="--angle: 30deg; --rx: 64px; --ry: 17px;">统一抽象</span>
+                <span class="kw kw-lg" style="--angle: 120deg; --rx: 69px; --ry: 18px;">跨层双向映射</span>
+                <span class="kw kw-md" style="--angle: 210deg; --rx: 66px; --ry: 17px;">金字塔多分辨率</span>
+                <span class="kw kw-md" style="--angle: 300deg; --rx: 63px; --ry: 17px;">参数插值</span>
+                <!-- 外圈 -->
+                <span class="kw kw-lg kw-accent" style="--angle: 0deg; --rx: 120px; --ry: 31px;">物理守恒</span>
+                <span class="kw kw-md" style="--angle: 45deg; --rx: 132px; --ry: 34px;">电流连续性</span>
+                <span class="kw kw-sm" style="--angle: 80deg; --rx: 137px; --ry: 35px;">热流守恒</span>
+                <span class="kw kw-sm" style="--angle: 115deg; --rx: 134px; --ry: 34px;">能量守恒</span>
+                <span class="kw kw-md kw-accent" style="--angle: 150deg; --rx: 129px; --ry: 33px;">混合键合</span>
+                <span class="kw kw-sm" style="--angle: 185deg; --rx: 132px; --ry: 34px;">接触电阻</span>
+                <span class="kw kw-sm" style="--angle: 220deg; --rx: 134px; --ry: 34px;">界面热阻</span>
+                <span class="kw kw-xs" style="--angle: 255deg; --rx: 137px; --ry: 35px;">寄生电容</span>
+                <span class="kw kw-md" style="--angle: 290deg; --rx: 129px; --ry: 33px;">一阶变量</span>
+                <span class="kw kw-lg" style="--angle: 325deg; --rx: 123px; --ry: 32px;">RC时间缩放</span>
+                <!-- 最外圈 -->
+                <span class="kw kw-xs" style="--angle: 20deg; --rx: 132px; --ry: 34px;">架构级</span>
+                <span class="kw kw-xs" style="--angle: 100deg; --rx: 137px; --ry: 36px;">模块级</span>
+                <span class="kw kw-xs" style="--angle: 180deg; --rx: 134px; --ry: 35px;">器件版图级</span>
+                <span class="kw kw-xs" style="--angle: 260deg; --rx: 137px; --ry: 36px;">工艺随机变异</span>
+                <span class="kw kw-xs" style="--angle: 340deg; --rx: 132px; --ry: 34px;">物理可行域</span>
+            </div>
+
             <div class="product-buttons">
-                <a href="trg-tcad/index.html" class="btn-product-primary">了解技术架构</a>
-                <a href="/trg-tcad/" class="btn-product-secondary">查看性能对比</a>
+                <a href="#" class="btn-product-primary">了解元模型架构</a>
+                <a href="#" class="btn-product-secondary">查看性能对比</a>
             </div>
         </div>
     </section>
 
-    <!-- ===== 产品区域 2：AI 引擎 ===== -->
+    <!-- ===== 产品板块2：跨层共优化 ===== -->
     <section class="product-section" id="ai">
         <div class="bg-layer bg-ai"></div>
         <div class="content-layer">
-            <h2>AI 物理准入引擎</h2>
-            <p class="subtitle">行业首创 AI-EDA 算法物理准入标准</p>
-            <p class="detail-text">
-                基于双元PDE机理判别规则，对所有智能仿真算法进行场景校验与准入筛选，杜绝扩散模型用于强耦合器件仿真、耦合模型用于宏观热仿真的错配问题。稳定性行业领先。
-            </p>
+            <h2>跨层共优化</h2>
+            <p class="subtitle">逻辑-物理协同 · 分层多目标优化</p>
+            <div class="product-text-desc">
+                依托金字塔多分辨率元模型底座，搭建全新跨层梯度传递共优化引擎，彻底革新传统EDA“先逻辑设计、后物理迭代”的低效流程。平台在粗粒度架构层完成全局设计空间搜索，在中细粒度模块与版图层完成精细化参数调优，支持层级间梯度信息双向回传与联动优化。全程搭载PDE物理约束投影算法，所有优化迭代结果均满足电热耦合物理规则，可同步完成功耗、时序、温度、良率多目标协同优化，大幅削减3D折叠芯片设计的迭代次数，解决传统3DIC仿真维度爆炸、收敛困难的核心痛点。
+            </div>
+
+            <!-- 椭圆词云2：跨层共优化 -->
+            <div class="word-cloud">
+                <!-- 中心核心词 -->
+                <span class="kw kw-xl" style="--angle: 0deg; --rx: 0px; --ry: 0px;">跨层共优化</span>
+                <!-- 内圈 -->
+                <span class="kw kw-lg" style="--angle: 40deg; --rx: 52px; --ry: 14px;">逻辑-物理协同</span>
+                <span class="kw kw-md" style="--angle: 130deg; --rx: 55px; --ry: 15px;">梯度传递</span>
+                <span class="kw kw-lg kw-accent" style="--angle: 220deg; --rx: 52px; --ry: 14px;">分层多目标</span>
+                <span class="kw kw-md" style="--angle: 310deg; --rx: 50px; --ry: 14px;">双向回传</span>
+                <!-- 外圈 -->
+                <span class="kw kw-sm" style="--angle: 0deg; --rx: 104px; --ry: 27px;">全局设计空间搜索</span>
+                <span class="kw kw-md" style="--angle: 45deg; --rx: 106px; --ry: 27px;">精细化参数调优</span>
+                <span class="kw kw-sm" style="--angle: 90deg; --rx: 109px; --ry: 28px;">联动优化</span>
+                <span class="kw kw-md" style="--angle: 135deg; --rx: 105px; --ry: 27px;">PDE物理约束投影</span>
+                <span class="kw kw-sm" style="--angle: 180deg; --rx: 106px; --ry: 27px;">电热耦合</span>
+                <span class="kw kw-md kw-accent" style="--angle: 215deg; --rx: 104px; --ry: 27px;">功耗</span>
+                <span class="kw kw-md" style="--angle: 240deg; --rx: 105px; --ry: 27px;">时序</span>
+                <span class="kw kw-md" style="--angle: 265deg; --rx: 105px; --ry: 27px;">温度</span>
+                <span class="kw kw-md" style="--angle: 290deg; --rx: 104px; --ry: 27px;">良率</span>
+                <span class="kw kw-lg" style="--angle: 325deg; --rx: 102px; --ry: 26px;">多目标协同</span>
+                <!-- 最外圈 -->
+                <span class="kw kw-xs" style="--angle: 20deg; --rx: 137px; --ry: 36px;">迭代次数削减</span>
+                <span class="kw kw-xs" style="--angle: 75deg; --rx: 141px; --ry: 37px;">维度爆炸</span>
+                <span class="kw kw-xs" style="--angle: 160deg; --rx: 140px; --ry: 37px;">收敛困难</span>
+                <span class="kw kw-xs" style="--angle: 250deg; --rx: 137px; --ry: 36px;">先逻辑后物理</span>
+            </div>
+
             <div class="product-buttons">
-                <a href="/trg-tcad/" class="btn-product-primary">了解 AI 引擎</a>
-                <a href="/trg-tcad/" class="btn-product-secondary">技术白皮书</a>
+                <a href="#" class="btn-product-primary">了解共优化引擎</a>
+                <a href="#" class="btn-product-secondary">技术白皮书</a>
             </div>
         </div>
     </section>
 
-    <!-- ===== 产品区域 3：正向+逆向设计 ===== -->
+    <!-- ===== 产品板块3：韬定律3D折叠芯片设计 ===== -->
     <section class="product-section" id="manufacturing">
         <div class="bg-layer bg-manufacturing"></div>
         <div class="content-layer">
-            <h2>正向仿真 + 逆向创新设计</h2>
-            <p class="subtitle">赋能芯片原创研发 · 突破设计壁垒</p>
-            <p class="detail-text">
-                正向精准完成器件热电耦合、载流子输运、老化可靠性仿真；逆向基于目标性能自动迭代最优器件结构、掺杂剖面、工艺参数，嵌入光刻、刻蚀等量产工艺约束，输出可直接落地的创新设计。
-            </p>
+            <h2>韬定律3D折叠芯片设计</h2>
+            <p class="subtitle">折叠互连原语 · 全局线长压缩 · RC功耗优化</p>
+            <div class="product-text-desc">
+                区别于传统3D芯片简单堆叠范式，本平台原生适配华为韬定律核心理论，独创逻辑折叠互连抽象原语，精准建模跨层逻辑分区折叠带来的全局互连线长压缩效应。通过内置RC时间缩放代价函数，可快速评估不同折叠划分方案的功耗、时序收益，无需反复开展完整版图仿真提取。同时结合混合键合阵列特性，实现电路耦合、热场扩散分层统一建模，搭配热错位排布策略，规避层间热点叠加风险，有效提升3D折叠芯片的制造良率与运行稳定性，全面适配先进2.5D/3D堆叠芯片的设计与量产需求。
+            </div>
+
+            <!-- 椭圆词云3：韬定律3D折叠芯片设计 -->
+            <div class="word-cloud">
+                <!-- 中心核心词 -->
+                <span class="kw kw-xl" style="--angle: 0deg; --rx: 0px; --ry: 0px;">韬定律</span>
+                <!-- 内圈 -->
+                <span class="kw kw-lg" style="--angle: 50deg; --rx: 55px; --ry: 15px;">3D折叠芯片</span>
+                <span class="kw kw-lg kw-accent" style="--angle: 140deg; --rx: 55px; --ry: 15px;">折叠互连原语</span>
+                <span class="kw kw-md" style="--angle: 230deg; --rx: 52px; --ry: 14px;">全局线长压缩</span>
+                <span class="kw kw-md" style="--angle: 320deg; --rx: 50px; --ry: 13px;">RC功耗优化</span>
+                <!-- 外圈 -->
+                <span class="kw kw-sm" style="--angle: 0deg; --rx: 106px; --ry: 27px;">逻辑分区跨层折叠</span>
+                <span class="kw kw-sm" style="--angle: 40deg; --rx: 111px; --ry: 29px;">RC时间缩放代价函数</span>
+                <span class="kw kw-md" style="--angle: 80deg; --rx: 113px; --ry: 29px;">折叠划分方案</span>
+                <span class="kw kw-sm" style="--angle: 120deg; --rx: 109px; --ry: 28px;">混合键合阵列</span>
+                <span class="kw kw-md kw-accent" style="--angle: 160deg; --rx: 106px; --ry: 27px;">电路耦合</span>
+                <span class="kw kw-md" style="--angle: 200deg; --rx: 109px; --ry: 28px;">热场扩散</span>
+                <span class="kw kw-sm" style="--angle: 240deg; --rx: 111px; --ry: 29px;">分层统一建模</span>
+                <span class="kw kw-sm" style="--angle: 275deg; --rx: 109px; --ry: 28px;">热错位排布</span>
+                <span class="kw kw-lg" style="--angle: 315deg; --rx: 105px; --ry: 27px;">制造良率</span>
+                <!-- 最外圈 -->
+                <span class="kw kw-xs" style="--angle: 30deg; --rx: 141px; --ry: 37px;">层间热点叠加</span>
+                <span class="kw kw-xs" style="--angle: 110deg; --rx: 146px; --ry: 39px;">运行稳定性</span>
+                <span class="kw kw-xs" style="--angle: 190deg; --rx: 144px; --ry: 38px;">2.5D/3D堆叠</span>
+                <span class="kw kw-xs" style="--angle: 270deg; --rx: 141px; --ry: 37px;">量产需求</span>
+            </div>
+
             <div class="product-buttons">
-                <a href="/trg-tcad/" class="btn-product-primary">探索逆向设计</a>
-                <a href="/trg-tcad/" class="btn-product-secondary">预约演示</a>
+                <a href="#" class="btn-product-primary">探索3D折叠设计</a>
+                <a href="#" class="btn-product-secondary">预约演示</a>
             </div>
         </div>
     </section>
 
-    <!-- ===== 特斯拉式参数条 ===== -->
+    <!-- ===== 数据参数板块 ===== -->
     <section class="specs-bar">
         <div class="specs-inner">
             <div class="spec-item">
@@ -796,7 +1028,7 @@
                 <div class="spec-label">推理延迟</div>
             </div>
             <div class="spec-item">
-                <div class="spec-value">双元<span class="unit">PDE</span></div>
+                <div class="spec-value">元模型<span class="unit">PDE</span></div>
                 <div class="spec-label">扩散 / 耦合自适应</div>
             </div>
             <div class="spec-item">
@@ -806,74 +1038,87 @@
         </div>
     </section>
 
-    <!-- ===== 七大核心特色 ===== -->
+    <!-- ===== 核心特色板块 ===== -->
     <section class="features-section" id="features">
         <div class="features-inner">
             <h2 class="features-title">
-                七大核心特色，覆盖<span class="accent">全流程智能仿真</span>
+                七大核心特色，覆盖<span class="accent">3D折叠芯片全流程</span>
             </h2>
+            <p class="features-subtitle">
+                基于元模型PDE内核，从金字塔多分辨率建模到跨层共优化，重新定义EDA设计范式。
+            </p>
             <div class="features-grid">
                 <div class="feature-row">
+                    <p class="feature-text-top">金字塔多分辨率架构</p>
                     <div class="f-num">01</div>
-                    <h3>原创双元物理自适应建模架构</h3>
-                    <p>自动识别2D/2.5D/3D芯片物理场景，自适应切换扩散/耦合仿真范式，实现从晶体管到整芯封装的全层级统一建模。</p>
+                    <h3>金字塔多分辨率元模型</h3>
+                    <p>原生支持架构级、模块级、器件版图级三层金字塔分层架构，实现不同分辨率设计对象的双向映射与参数插值，打破传统EDA单层固定粒度的设计局限，支撑自上而下细化、自下而上反馈的双向协同设计流程。</p>
                 </div>
                 <div class="feature-row">
+                    <p class="feature-text-top">物理约束内核</p>
                     <div class="f-num">02</div>
-                    <h3>理论机理 + 工程里程碑数据双驱动</h3>
-                    <p>自研量产芯片工程数据库，提供量产级边界约束与参数校准，精准覆盖工艺波动、参数漂移、界面场畸变等工程细节。</p>
+                    <h3>物理守恒恒等式硬约束</h3>
+                    <p>将电流连续性、热流守恒、能量守恒核心物理方程内置为元模型硬约束，所有优化求解过程严格限定在物理可行域内，从根源杜绝电流不守恒、热场矛盾等物理不可实现的设计结果，保障仿真与优化的严谨性。</p>
                 </div>
                 <div class="feature-row">
+                    <p class="feature-text-top">韬定律专属适配</p>
                     <div class="f-num">03</div>
-                    <h3>速度精度双向平衡</h3>
-                    <p>高精度场景启用PINN/GNO耦合算法对标TCAD；批量迭代场景切换神经算子扩散算法，实现十倍级加速，推理延迟毫秒级。</p>
+                    <h3>韬定律折叠互连原语</h3>
+                    <p>独创适配韬定律的逻辑折叠互连单元，精准建模逻辑跨层折叠带来的全局线长压缩、RC时延缩减核心收益，区别于传统3D堆叠建模，可快速量化不同折叠方案的功耗与时序优化效果，适配新型3D折叠芯片设计范式。</p>
                 </div>
                 <div class="feature-row">
+                    <p class="feature-text-top">层级协同</p>
                     <div class="f-num">04</div>
-                    <h3>正向仿真 + 逆向创新设计双能力</h3>
-                    <p>集成高精度正向仿真与工艺约束逆向设计，基于目标性能自动迭代最优器件结构、掺杂剖面，嵌入光刻/刻蚀量产约束。</p>
+                    <h3>跨层梯度传递与共优化</h3>
+                    <p>实现高层架构优化梯度向底层版图设计的双向传递，打通逻辑设计与物理实现的壁垒，摒弃传统EDA分层解耦、反复迭代的低效模式，实现架构、电路、版图、物理场的一体化协同优化。</p>
                 </div>
                 <div class="feature-row">
+                    <p class="feature-text-top">3D封装建模</p>
                     <div class="f-num">05</div>
-                    <h3>AI算法物理准入机制</h3>
-                    <p>行业首创AI-EDA算法物理准入标准，基于双元PDE机理判别规则对算法进行场景校验，杜绝模型错配、仿真失真。</p>
+                    <h3>三维混合键合互连元模型</h3>
+                    <p>针对先进混合键合工艺原生建模，将键合面积、接触电阻、界面热阻、层间寄生电容等关键参数作为一阶核心变量，精准还原3D堆叠芯片的层间耦合特性，适配先进封装的物理仿真。</p>
                 </div>
                 <div class="feature-row">
+                    <p class="feature-text-top">良率优化</p>
                     <div class="f-num">06</div>
-                    <h3>多尺度异构物理统一建模</h3>
-                    <p>微观耦合+宏观扩散分层统一建模范式，精准刻画器件多物理场突变与整芯热场推演，适配2.5D/3D先进封装。</p>
+                    <h3>统计工艺变异与良率优化</h3>
+                    <p>内置工艺统计变异模型，支持晶圆空间相关参数扰动与多层级噪声注入，可在设计阶段精准预判工艺偏差带来的性能波动，通过均值方差约束优化，直接实现芯片良率的前置优化与精准预估。</p>
                 </div>
                 <div class="feature-row">
+                    <p class="feature-text-top">AI加速</p>
                     <div class="f-num">07</div>
-                    <h3>轻量化可拓展架构</h3>
-                    <p>模块化、可拓展产品级架构，支持本地/云端/数字孪生集成，无缝对接现有设计流程，低成本、高效率、易落地。</p>
+                    <h3>AI降阶模型与自适应求解</h3>
+                    <p>嵌入FNO/PINN神经网络降阶求解器，粗粒度层级采用AI快速预测物理场分布，细粒度层级启用高精度数值求解，实现速度与精度的自适应平衡，解决3D多物理场仿真算力开销大、迭代缓慢的行业痛点。</p>
                 </div>
                 <div class="feature-row" style="border-bottom: none; border-right: none;">
-                    <!-- 占位保持网格平衡 -->
+                    <p class="feature-text-top">工业落地兼容</p>
+                    <div class="f-num">08</div>
+                    <h3>工业级落地与商用兼容</h3>
+                    <p>完整适配工业EDA流程，支持网表、GDS版图等通用格式导出，可对接传统商用EDA工具完成最终签核。同时支持TCAD工艺数据闭环校准，打通设计与制造链路，满足商业化量产落地需求。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== 宣言 ===== -->
+    <!-- ===== 品牌宣言板块 ===== -->
     <section class="manifesto-section">
         <blockquote>
-            “为设计，为制造<br>
-            <strong>重新发明EDA</strong><br>
-            <span class="blue">更精确、更智能</span>”
+            为设计，为制造<br>
+            <strong>重构EDA</strong><br>
+            <span class="blue">更精确、更智能</span>的芯片设计工具
         </blockquote>
         <div class="author">— Rexyn 创始团队</div>
     </section>
 
-    <!-- ===== 特斯拉式页脚 ===== -->
+    <!-- ===== 页脚 ===== -->
     <footer class="footer-tesla">
         <div class="footer-inner">
             <div class="footer-links">
-                <a href="/trg-tcad/">Rexyn © 2025</a>
-                <a href="/trg-tcad/">隐私政策</a>
-                <a href="/trg-tcad/">服务条款</a>
-                <a href="/trg-tcad/">联系我们</a>
-                <a href="/trg-tcad/">加入我们</a>
+                <a href="#">Rexyn © 2025</a>
+                <a href="#">隐私政策</a>
+                <a href="#">服务条款</a>
+                <a href="#">联系我们</a>
+                <a href="#">加入我们</a>
             </div>
             <div class="footer-copy">
                 工业软件严谨承诺 · 元模型PDE原创技术
