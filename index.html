@@ -552,6 +552,145 @@
             text-transform: uppercase;
         }
 
+        /* ===== 场景分类（新增） ===== */
+        .scenes-section {
+            background: #000;
+            padding: 100px 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .scenes-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .scenes-title {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .scenes-title .accent {
+            color: #5ac8fa;
+        }
+
+        .scenes-subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+            font-weight: 300;
+            margin-bottom: 60px;
+            max-width: 760px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .scenes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .scene-card {
+            position: relative;
+            padding: 32px 26px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .scene-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #5ac8fa, #a0f0ff, #5ac8fa);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .scene-card:hover {
+            border-color: rgba(90, 200, 250, 0.4);
+            background: rgba(90, 200, 250, 0.06);
+            transform: translateY(-4px);
+        }
+
+        .scene-card:hover::before {
+            opacity: 1;
+        }
+
+        .scene-card .s-icon {
+            font-size: 1.6rem;
+            margin-bottom: 16px;
+        }
+
+        .scene-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            letter-spacing: -0.01em;
+            color: #fff;
+        }
+
+        .scene-card .s-sub {
+            font-size: 0.78rem;
+            color: #7ad4ff;
+            margin-bottom: 18px;
+            letter-spacing: 0.4px;
+            font-weight: 500;
+        }
+
+        .scene-card .s-block {
+            margin-bottom: 14px;
+        }
+
+        .scene-card .s-label {
+            font-size: 0.7rem;
+            color: #5ac8fa;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .scene-card .s-text {
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .scene-card .s-priority {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .scene-card .s-priority span {
+            font-size: 0.68rem;
+            color: rgba(255, 255, 255, 0.9);
+            background: rgba(90, 200, 250, 0.12);
+            border: 1px solid rgba(90, 200, 250, 0.25);
+            padding: 3px 8px;
+            border-radius: 10px;
+            letter-spacing: 0.3px;
+        }
+
+        .scene-card .s-priority span:first-child {
+            background: rgba(90, 200, 250, 0.22);
+            border-color: rgba(90, 200, 250, 0.5);
+            color: #a0f0ff;
+            font-weight: 500;
+        }
+
         /* ===== 核心特色 ===== */
         .features-section {
             background: #000;
@@ -959,6 +1098,9 @@
                 grid-template-columns: 1fr;
                 gap: 32px;
             }
+            .scenes-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (max-width: 768px) {
@@ -1048,6 +1190,13 @@
             .kits-grid {
                 grid-template-columns: 1fr;
             }
+
+            .scenes-section {
+                padding: 80px 20px;
+            }
+            .scenes-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1093,6 +1242,7 @@
                 <a href="#pde">元模型PDE</a>
                 <a href="#ai">跨层共优化</a>
                 <a href="#manufacturing">3D折叠</a>
+                <a href="#scenes">场景分类</a>
                 <a href="#products">产品矩阵</a>
                 <a href="#features">核心特色</a>
             </div>
@@ -1255,6 +1405,145 @@
             <div class="spec-item">
                 <div class="spec-value">0<span class="unit">盲配</span></div>
                 <div class="spec-label">AI 物理准入机制</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 场景分类板块（新增） ===== -->
+    <section class="scenes-section" id="scenes">
+        <div class="scenes-inner">
+            <h2 class="scenes-title">
+                五类芯片场景，<span class="accent">精准约束建模</span>
+            </h2>
+            <p class="scenes-subtitle">
+                不同芯片类型的核心诉求、约束优先级与工作特征差异巨大。Rexyn 元模型内置场景化约束模板，为每类芯片提供专属的物理建模与优化策略。
+            </p>
+            <div class="scenes-grid">
+
+                <div class="scene-card">
+                    <div class="s-icon">🧠</div>
+                    <h3>处理器 / 加速器</h3>
+                    <div class="s-sub">CPU / GPU / AI 处理器</div>
+                    <div class="s-block">
+                        <div class="s-label">核心诉求</div>
+                        <div class="s-text">超高主频、超大算力、极致吞吐、动态功耗波动大</div>
+                    </div>
+                    <div class="s-block">
+                        <div class="s-label">约束优先级</div>
+                        <div class="s-priority">
+                            <span>时序性能</span>
+                            <span>峰值热可靠性</span>
+                            <span>动态功耗优化</span>
+                            <span>工艺变异容忍度</span>
+                        </div>
+                    </div>
+                    <div class="s-block">
+                        <div class="s-label">工作特征</div>
+                        <div class="s-text">负载动态跳变、瞬时峰值功耗极高、热点密集、对延时极度敏感</div>
+                    </div>
+                </div>
+
+                <div class="scene-card">
+                    <div class="s-icon">💾</div>
+                    <h3>存储芯片</h3>
+                    <div class="s-sub">DRAM / NAND / Flash</div>
+                    <div class="s-block">
+                        <div class="s-label">核心诉求</div>
+                        <div class="s-text">高存储密度、低漏电、长寿命、读写稳定性、阵列一致性</div>
+                    </div>
+                    <div class="s-block">
+                        <div class="s-label">约束优先级</div>
+                        <div class="s-priority">
+                            <span>器件漏电控制</span>
+                            <span>阵列均匀性</span>
+                            <span>耐久可靠性</span>
+                            <span>静态功耗</span>
+                        </div>
+                    </div>
+                    <div class="s-block">
+                        <div class="s-label">工作特征</div>
+                        <div class="s-text">大规模重复阵列、长期持续读写、器件参数一致性要求极高，禁止单元失效偏移</div>
+                    </div>
+                </div>
+
+                <div class="scene-card">
+                    <div class="s-icon">🎬</div>
+                    <h3>视频处理芯片</h3>
+                    <div class="s-sub">ISP / Codec / 视频 SoC</div>
+                    <div class="s-block">
+                        <div class="s-label">核心诉求</div>
+                        <div class="s-text">高带宽、低延时、图像精度无损、稳态功耗均衡</div>
+                    </div>
+                    <div class="s-block">
+                        <div class="s-label">约束优先级</div>
+                        <div class="s-priority">
+                            <span>信号完整性</span>
+                            <span>带宽稳定性</span>
+                            <span>功耗均衡</span>
+                            <span>中等可靠性</span>
+                        </div>
+                    </div>
+                    <div class="s-block">
+                        <div class="s-label">工作特征</div>
+                        <div class="s-text">流水线持续运算、数据吞吐量大、负载平稳，对噪声干扰、时序抖动极度敏感</div>
+                    </div>
+                </div>
+
+                <div class="scene-card">
+                    <div class="s-icon">🏭</div>
+                    <h3>工业控制芯片</h3>
+                    <div class="s-sub">MCU / 工业 SoC / 车规控制芯片</div>
+                    <div class="s-block">
+                        <div class="s-label">核心诉求</div>
+                        <div class="s-text">超高稳定性、宽温域适配、抗干扰、长寿命、低失效率</div>
+                    </div>
+                    <div class="s-block">
+                        <div class="s-label">约束优先级</div>
+                        <div class="s-priority">
+                            <span>环境可靠性</span>
+                            <span>工艺鲁棒性</span>
+                            <span>低静态功耗</span>
+                            <span>基础性能</span>
+                        </div>
+                    </div>
+                    <div class="s-block">
+                        <div class="s-label">工作特征</div>
+                        <div class="s-text">长期稳态运行、高低温极端工况、电磁环境复杂，禁止瞬时失效与参数漂移</div>
+                    </div>
+                </div>
+
+                <div class="scene-card">
+                    <div class="s-icon">🔋</div>
+                    <h3>端侧 AI 低功耗芯片</h3>
+                    <div class="s-sub">Edge AI NPU / 超低功耗 SoC</div>
+                    <div class="s-block">
+                        <div class="s-label">核心诉求</div>
+                        <div class="s-text">极致低功耗、低待机漏电、算力能效比最优、轻量化推理稳定</div>
+                    </div>
+                    <div class="s-block">
+                        <div class="s-label">约束优先级</div>
+                        <div class="s-priority">
+                            <span>超低功耗能效</span>
+                            <span>功耗稳定性</span>
+                            <span>轻量算力</span>
+                            <span>常规时序性能</span>
+                        </div>
+                    </div>
+                    <div class="s-block">
+                        <div class="s-label">工作特征</div>
+                        <div class="s-text">间歇唤醒、低占空比推理、长期待机、功耗预算严格受限（mW 级），对漏电、动态功耗波动极度敏感，适配终端电池供电场景</div>
+                    </div>
+                </div>
+
+                <!-- 第六个占位卡片：可放"更多场景"或留空以保持网格平衡 -->
+                <div class="scene-card" style="display: flex; align-items: center; justify-content: center; text-align: center; min-height: 280px; background: rgba(90, 200, 250, 0.03); border-style: dashed; border-color: rgba(90, 200, 250, 0.25);">
+                    <div>
+                        <div class="s-icon" style="font-size: 2rem;">＋</div>
+                        <h3 style="font-size: 1rem; font-weight: 500; color: rgba(255,255,255,0.85); margin-top: 8px;">更多场景持续适配</h3>
+                        <p style="font-size: 0.82rem; color: rgba(255,255,255,0.65); line-height: 1.6; margin-top: 10px; max-width: 240px;">Rexyn 元模型预留场景模板接口，可根据客户需求快速扩展新的芯片类型约束配置。</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
