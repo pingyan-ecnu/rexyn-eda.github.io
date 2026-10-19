@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>核心特色 | Rexyn</title>
+    <!-- 复用完整版 <style> + .nav-center a.active -->
+</head>
+<body>
+
+    <nav class="nav-fixed">
+        <div class="nav-inner">
+            <div class="nav-logo">REXYN</div>
+            <div class="nav-center">
+                <a href="index.html">首页</a>
+                <a href="pde.html">元模型PDE</a>
+                <a href="ai.html">跨层共优化</a>
+                <a href="manufacturing.html">3D折叠</a>
+                <a href="scenes.html">场景分类</a>
+                <a href="features.html" class="active">核心特色</a>
+                <a href="simulation.html">仿真与模拟</a>
+                <a href="products.html">产品矩阵</a>
+            </div>
+            <div class="nav-right">
+                <a href="#">技术白皮书</a>
+                <a href="#">联系顾问</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="features-section" id="features" style="padding-top: 140px;">
+        <div class="features-inner">
+            <h2 class="features-title">
+                七大核心特色，覆盖<span class="accent">3D折叠芯片全流程</span>
+            </h2>
+            <p class="features-subtitle">
+                基于元模型PDE内核，从金字塔多分辨率建模到跨层共优化，重新定义EDA设计范式。
+            </p>
+            <div class="features-grid">
+                <div class="feature-row">
+                    <p class="feature-text-top">金字塔多分辨率架构</p>
+                    <div class="f-num">01</div>
+                    <h3>金字塔多分辨率元模型</h3>
+                    <p>原生支持架构级、模块级、器件版图级三层金字塔分层架构，实现不同分辨率设计对象的双向映射与参数插值，打破传统EDA单层固定粒度的设计局限，支撑自上而下细化、自下而上反馈的双向协同设计流程。</p>
+                </div>
+                <div class="feature-row">
+                    <p class="feature-text-top">物理约束内核</p>
+                    <div class="f-num">02</div>
+                    <h3>物理守恒恒等式硬约束</h3>
+                    <p>将电流连续性、热流守恒、能量守恒核心物理方程内置为元模型硬约束，所有优化求解过程严格限定在物理可行域内，从根源杜绝电流不守恒、热场矛盾等物理不可实现的设计结果，保障仿真与优化的严谨性。</p>
+                </div>
+                <div class="feature-row">
+                    <p class="feature-text-top">韬定律专属适配</p>
+                    <div class="f-num">03</div>
+                    <h3>韬定律折叠互连原语</h3>
+                    <p>独创适配韬定律的逻辑折叠互连单元，精准建模逻辑跨层折叠带来的全局线长压缩、RC时延缩减核心收益，区别于传统3D堆叠建模，可快速量化不同折叠方案的功耗与时序优化效果，适配新型3D折叠芯片设计范式。</p>
+                </div>
+                <div class="feature-row">
+                    <p class="feature-text-top">层级协同</p>
+                    <div class="f-num">04</div>
+                    <h3>跨层梯度传递与共优化</h3>
+                    <p>实现高层架构优化梯度向底层版图设计的双向传递，打通逻辑设计与物理实现的壁垒，摒弃传统EDA分层解耦、反复迭代的低效模式，实现架构、电路、版图、物理场的一体化协同优化。</p>
+                </div>
+                <div class="feature-row">
+                    <p class="feature-text-top">3D封装建模</p>
+                    <div class="f-num">05</div>
+                    <h3>三维混合键合互连元模型</h3>
+                    <p>针对先进混合键合工艺原生建模，将键合面积、接触电阻、界面热阻、层间寄生电容等关键参数作为一阶核心变量，精准还原3D堆叠芯片的层间耦合特性，适配先进封装的物理仿真。</p>
+                </div>
+                <div class="feature-row">
+                    <p class="feature-text-top">良率优化</p>
+                    <div class="f-num">06</div>
+                    <h3>统计工艺变异与良率优化</h3>
+                    <p>内置工艺统计变异模型，支持晶圆空间相关参数扰动与多层级噪声注入，可在设计阶段精准预判工艺偏差带来的性能波动，通过均值方差约束优化，直接实现芯片良率的前置优化与精准预估。</p>
+                </div>
+                <div class="feature-row">
+                    <p class="feature-text-top">AI加速</p>
+                    <div class="f-num">07</div>
+                    <h3>AI降阶模型与自适应求解</h3>
+                    <p>嵌入FNO/PINN神经网络降阶求解器，粗粒度层级采用AI快速预测物理场分布，细粒度层级启用高精度数值求解，实现速度与精度的自适应平衡，解决3D多物理场仿真算力开销大、迭代缓慢的行业痛点。</p>
+                </div>
+                <div class="feature-row" style="border-bottom: none; border-right: none;">
+                    <p class="feature-text-top">工业落地兼容</p>
+                    <div class="f-num">08</div>
+                    <h3>工业级落地与商用兼容</h3>
+                    <p>完整适配工业EDA流程，支持网表、GDS版图等通用格式导出，可对接传统商用EDA工具完成最终签核。同时支持TCAD工艺数据闭环校准，打通设计与制造链路，满足商业化量产落地需求。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-tesla">
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="index.html">Rexyn © 2025</a>
+                <a href="#">隐私政策</a>
+                <a href="#">服务条款</a>
+                <a href="#">联系我们</a>
+                <a href="#">加入我们</a>
+            </div>
+            <div class="footer-copy">工业软件严谨承诺 · 元模型PDE原创技术</div>
+        </div>
+    </footer>
+
+</body>
+</html>
