@@ -1472,3 +1472,190 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     background: #5ac8fa;
 }
+
+
+/* ===== 联系顾问 ===== */
+.contact-section {
+    background: #000;
+    padding: 140px 40px 100px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.contact-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-title .accent {
+    color: #5ac8fa;
+}
+
+.contact-subtitle {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 60px;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.advisor-card {
+    position: relative;
+    padding: 36px 28px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    text-align: center;
+}
+
+.advisor-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #5ac8fa, #a0f0ff, #5ac8fa);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.advisor-card:hover {
+    border-color: rgba(90, 200, 250, 0.4);
+    background: rgba(90, 200, 250, 0.06);
+    transform: translateY(-4px);
+}
+
+.advisor-card:hover::before {
+    opacity: 1;
+}
+
+.advisor-avatar {
+    font-size: 2.6rem;
+    margin-bottom: 16px;
+}
+
+.advisor-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+.advisor-role {
+    font-size: 0.8rem;
+    color: #7ad4ff;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    margin-bottom: 20px;
+}
+
+.advisor-divider {
+    width: 40px;
+    height: 1px;
+    background: rgba(90, 200, 250, 0.3);
+    margin: 0 auto 20px;
+}
+
+.advisor-info {
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+.ai-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    font-size: 0.82rem;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+}
+
+.ai-row:last-child {
+    border-bottom: none;
+}
+
+.ai-label {
+    color: #5ac8fa;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+    margin-right: 12px;
+}
+
+.ai-value {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    word-break: break-all;
+    text-align: right;
+}
+
+.advisor-desc {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.65;
+    font-weight: 300;
+    text-align: left;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contact-cta-box {
+    padding: 48px 40px;
+    background: rgba(90, 200, 250, 0.05);
+    border: 1px solid rgba(90, 200, 250, 0.25);
+    border-radius: 16px;
+    text-align: center;
+}
+
+.contact-cta-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 14px;
+    letter-spacing: -0.01em;
+}
+
+.contact-cta-desc {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.7;
+    font-weight: 300;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 120px 20px 80px;
+    }
+    .contact-cta-box {
+        padding: 32px 20px;
+    }
+}
